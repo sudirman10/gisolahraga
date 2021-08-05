@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Agu 2021 pada 08.34
+-- Waktu pembuatan: 05 Agu 2021 pada 04.56
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -351,8 +351,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `nama`, `username`, `password`, `no_telpon`, `alamat`, `email`) VALUES
-(1, 'Sudirman\r\n', 'admin', 'admin', '082134921819', 'jalan pesut ', 'sudirman@gmail.com\r\n'),
-(2, 'maryam\r\n', 'user', 'user', '0821321321387', 'jalan Tanjung aru', 'maryam@gmail.com\r\n');
+(1, 'Sudirman\r\n', 'admin', '4321admin', '082134921819', 'jalan pesut ', 'sudirman@gmail.com\r\n');
 
 --
 -- Indexes for dumped tables
