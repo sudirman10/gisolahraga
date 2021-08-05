@@ -11,7 +11,7 @@
 							Nama
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->nama_penginapan; ?>
+							<?php echo $olahraga->nama_olahraga; ?>
 						</div>
 					</div>
 
@@ -20,7 +20,7 @@
 							<p class="control-label">Kategori</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->nama_kategori; ?>
+							<?php echo $olahraga->nama_kategori; ?>
 						</div>
 					</div>
 
@@ -29,7 +29,16 @@
 							<p class="control-label">Alamat</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->alamat; ?>
+							<?php echo $olahraga->alamat; ?>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-4">
+							<p class="control-label">Jam Buka</p>
+						</div>
+						<div class="col-sm-8">:
+							<?php echo $olahraga->jam_buka; ?>
 						</div>
 					</div>
 
@@ -38,7 +47,7 @@
 							<p class="control-label">No Telpon</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->no_telpon; ?>
+							<?php echo $olahraga->no_telpon; ?>
 						</div>
 					</div>
 
@@ -47,7 +56,7 @@
 							<p class="control-label">Latitude</p>
 						</div>
 						<div class="col-sm-8"> :
-							<?php echo $penginapan->latitude; ?>
+							<?php echo $olahraga->latitude; ?>
 						</div>
 					</div>
 
@@ -56,7 +65,7 @@
 							<p class="control-label">Longitude</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->longitude; ?>
+							<?php echo $olahraga->longitude; ?>
 						</div>
 					</div>
 
@@ -65,7 +74,7 @@
 							<p class="control-label">Harga</p>
 						</div>
 						<div class="col-sm-8">: Rp.
-							<?php echo number_format($penginapan->harga); ?>
+							<?php echo number_format($olahraga->harga); ?>
 						</div>
 					</div>
 
@@ -74,7 +83,7 @@
 							<p class="control-label">Fasilitas</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->fasilitas; ?>
+							<?php echo $olahraga->fasilitas; ?>
 						</div>
 					</div>
 
@@ -83,7 +92,7 @@
 							<p class="control-label">Deskripsi</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->deskripsi; ?>
+							<?php echo $olahraga->deskripsi; ?>
 						</div>
 					</div>
 
@@ -100,7 +109,14 @@
 					<?php 
 						if ($this->uri->segment(3) == 0) {
 							?>
-						<button onclick="bandingClick()">Pilih Perbandingan</button>
+							<select name="" id="ban">
+							<?php
+							foreach ($select->result() as $item){?>
+								<option value="<?php echo $item->id_olahraga; ?> "> <?php echo $item->nama_olahraga; ?></option>
+							<?php }
+							?>
+							</select>
+							<button onclick="bandingClick()">Pilih Perbandingan</button>
 							<?php 
 						} else { 
 
@@ -110,7 +126,7 @@
 							Nama
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->nama_penginapan; ?>
+							<?php echo $banding->nama_olahraga; ?>
 						</div>
 					</div>
 
@@ -119,7 +135,7 @@
 							<p class="control-label">Kategori</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->nama_kategori; ?>
+							<?php echo $banding->nama_kategori; ?>
 						</div>
 					</div>
 
@@ -128,7 +144,16 @@
 							<p class="control-label">Alamat</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->alamat; ?>
+							<?php echo $banding->alamat; ?>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-4">
+							<p class="control-label">Jam Buka</p>
+						</div>
+						<div class="col-sm-8">:
+							<?php echo $banding->jam_buka; ?>
 						</div>
 					</div>
 
@@ -137,7 +162,7 @@
 							<p class="control-label">No Telpon</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->no_telpon; ?>
+							<?php echo $banding->no_telpon; ?>
 						</div>
 					</div>
 
@@ -146,7 +171,7 @@
 							<p class="control-label">Latitude</p>
 						</div>
 						<div class="col-sm-8"> :
-							<?php echo $penginapan->latitude; ?>
+							<?php echo $banding->latitude; ?>
 						</div>
 					</div>
 
@@ -155,7 +180,7 @@
 							<p class="control-label">Longitude</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->longitude; ?>
+							<?php echo $banding->longitude; ?>
 						</div>
 					</div>
 
@@ -164,7 +189,7 @@
 							<p class="control-label">Harga</p>
 						</div>
 						<div class="col-sm-8">: Rp.
-							<?php echo number_format($penginapan->harga); ?>
+							<?php echo number_format($banding->harga); ?>
 						</div>
 					</div>
 
@@ -173,7 +198,7 @@
 							<p class="control-label">Fasilitas</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->fasilitas; ?>
+							<?php echo $banding->fasilitas; ?>
 						</div>
 					</div>
 
@@ -182,7 +207,7 @@
 							<p class="control-label">Deskripsi</p>
 						</div>
 						<div class="col-sm-8">:
-							<?php echo $penginapan->deskripsi; ?>
+							<?php echo $banding->deskripsi; ?>
 						</div>
 					</div>
 							<?php
@@ -197,6 +222,8 @@
 
 <script>
 	function bandingClick() {
-		window.open('https://javascript.info/')
+		var e = document.getElementById("ban");
+		var strUser = e.value;
+		window.location.href = strUser; 
 	}
 </script>

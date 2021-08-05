@@ -27,7 +27,7 @@ class Setting extends CI_Controller {
 		$map=$this->googlemaps->create_map();
 		$setting=$this->m_setting->list_setting();
 		$data = array(
-							'title'    =>	'GIS Sarana Olahraga '.$setting->nama_wilayah,
+							'title'    =>	'GIS Tempat Olahraga '.$setting->nama_wilayah,
 							'title2'    =>	'Setting',
 							'map'		=> $map,
                             'setting'	=> $setting,                            

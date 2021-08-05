@@ -27,12 +27,12 @@
 				<?php $no=1 ; foreach($gallery as $value){ ?>
 				<tr>
 					<td class="text-center"><?php echo $no++; ?></td>
-					<td><?php echo $value->nama_penginapan; ?></td>
-					<td  width="100px" class="text-center"><img width="32px" src="<?php echo base_url('assets/gambar_penginapan/'.$value->gambar_penginapan); ?>">
+					<td><?php echo $value->nama_olahraga; ?></td>
+					<td  width="100px" class="text-center"><img width="32px" src="<?php echo base_url('assets/gambar_olahraga/'.$value->gambar_olahraga); ?>">
 						<?php echo $value->total_foto; ?> Foto
 					</td>
 					<td width="130px" class="text-center">
-						<a href="<?php echo base_url('gallery/addfoto/'.$value->id_penginapan); ?>" class="btn btn-success btn-xs"><i class="fa fa-photo"></i> Add Foto</a>
+						<a href="<?php echo base_url('gallery/addfoto/'.$value->id_olahraga); ?>" class="btn btn-success btn-xs"><i class="fa fa-photo"></i> Add Foto</a>
 					</td>
 				</tr>
 			<?php } ?>

@@ -5,20 +5,20 @@ class M_gallery extends CI_Model {
 
 	public function lists()
 	{
-		$this->db->select('tbl_penginapan.*,COUNT(tbl_foto.id_penginapan) as total_foto');
-		$this->db->from('tbl_penginapan');
-		$this->db->join('tbl_foto', 'tbl_foto.id_penginapan = tbl_penginapan.id_penginapan', 'left');
-		$this->db->group_by('tbl_penginapan.id_penginapan');
-		$this->db->order_by('id_penginapan','desc');
+		$this->db->select('tbl_olahraga.*,COUNT(tbl_foto.id_olahraga) as total_foto');
+		$this->db->from('tbl_olahraga');
+		$this->db->join('tbl_foto', 'tbl_foto.id_olahraga = tbl_olahraga.id_olahraga', 'left');
+		$this->db->group_by('tbl_olahraga.id_olahraga');
+		$this->db->order_by('id_olahraga','desc');
 		$query=$this->db->get();
 		return $query->result();
 	}	
 
-	public function detail($id_penginapan)
+	public function detail($id_olahraga)
 	{
 		$this->db->select('*');
-		$this->db->from('tbl_penginapan');
-		$this->db->where('id_penginapan', $id_penginapan);
+		$this->db->from('tbl_olahraga');
+		$this->db->where('id_olahraga', $id_olahraga);
 		$query=$this->db->get();
 		return $query->row();
 	}
@@ -32,11 +32,11 @@ class M_gallery extends CI_Model {
 		return $query->row();
 	}
 
-	public function foto($id_penginapan)
+	public function foto($id_olahraga)
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_foto');
-		$this->db->where('id_penginapan', $id_penginapan);
+		$this->db->where('id_olahraga', $id_olahraga);
 		$query=$this->db->get();
 		return $query->result();
 

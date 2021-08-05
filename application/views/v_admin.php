@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="panel panel-primary">
-        <div class="panel-heading">Pemetaan Sarana Olahraga Kota Samarinda</div>
+        <div class="panel-heading">Pemetaan Tempat Olahraga Kota Samarinda</div>
         <div class="panel-body">
           
 

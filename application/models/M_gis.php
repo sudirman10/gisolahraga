@@ -12,43 +12,43 @@ class M_gis extends CI_Model {
         $this->load->database();
     }
 
-    //menampilka seluruh data penginapan
+    //menampilka seluruh data olahraga
     public function tampildata()
 	{
 		$this->db->select('*');
-		$this->db->from('tbl_penginapan');
+		$this->db->from('tbl_olahraga');
 		$query=$this->db->get();
 		return $query->result();
 	}
 
-    //tambah data penginapan
+    //tambah data olahraga
      public function tambah($data)
      {
-       $this->db->insert('tbl_penginapan',$data);
+       $this->db->insert('tbl_olahraga',$data);
      }
 
-      //hapus data penginapan
+      //hapus data olahraga
      public function delete($data)
      {
        $this->db->where('id',$data['id']);
-       $this->db->delete('tbl_penginapan',$data);
+       $this->db->delete('tbl_olahraga',$data);
      }
 
-     //detail sekolah
+     //detail olahraga
     public function detail($id)
     {
         $this->db->select('*');
-        $this->db->from('tbl_penginapan');
+        $this->db->from('tbl_olahraga');
         $this->db->where('id', $id);
         $query=$this->db->get();
         return $query->row();
     }
 
-    //merudab data sekolah
+    //merudab data olahraga
     public function update($data)
     {
         $this->db->where('id', $data['id']);
-        $this->db->update('tbl_penginapan',$data);
+        $this->db->update('tbl_olahraga',$data);
     }
 
 }

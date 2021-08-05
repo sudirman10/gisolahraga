@@ -11,7 +11,7 @@
                         </li>
 
                         <li>
-                            <a href="<?php echo base_url('penginapan'); ?>"><i class="fa fa-building fa-fw"></i> Tempat Olahraga</a>
+                            <a href="<?php echo base_url('olahraga'); ?>"><i class="fa fa-building fa-fw"></i> Tempat Olahraga</a>
                         </li>
 
                          <li>

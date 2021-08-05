@@ -97,7 +97,7 @@ echo form_open_multipart('setting/edit',$atribut);
 
 <div class="col-sm-8">
   <div class="panel panel-success">
-    <div class="panel-heading">Pilih Lokasi Fitness</div>
+    <div class="panel-heading">Pilih Lokasi Olahraga</div>
     <div class="panel-body">
       
     <?php echo $map['html']; ?>

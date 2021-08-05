@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_kategori extends CI_Model {
 
-	//menampilka seluruh data penginapan
+	//menampilka seluruh data olahraga
     public function lists()
 	{
 		$this->db->select('*');

@@ -17,7 +17,7 @@
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
 							<li><a href="<?php echo base_url('') ?>">Home</a></li>
-								<li><a href="<?php echo base_url('home/listpenginapan') ;?>">List Tempat Olahraga</a></li>
+								<li><a href="<?php echo base_url('home/listolahraga') ;?>">List Tempat Olahraga</a></li>
 								<li><a href="<?php echo base_url('home/about') ;?>">About</a></li>	
 						</ul>
 					</nav>

@@ -26,7 +26,7 @@ public function __construct()
 
         }
         $setting=$this->m_setting->list_setting();
-        $data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah );
+        $data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah );
         $this->load->view('v_login', $data, FALSE);
     }
 

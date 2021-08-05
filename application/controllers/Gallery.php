@@ -16,7 +16,7 @@ class Gallery extends CI_Controller {
 	{
 		$setting=$this->m_setting->list_setting();
 		$gallery=$this->m_gallery->lists();
-        $data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
+        $data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
 						'title2' => 'Data Gallery',
                         'isi'	=>	'admin/gallery/v_lists',
 						'gallery'	=>	$gallery,
@@ -25,27 +25,27 @@ class Gallery extends CI_Controller {
 		$this->load->view('admin/layout/v_wrapper', $data,false);	
 	}
 
-	public function addfoto($id_penginapan)
+	public function addfoto($id_olahraga)
 	{
 		$this->form_validation->set_rules('ket_foto', 'Keterangan Foto','required',
         array('required' => '%s Harus Diisi'));
 
         if ($this->form_validation->run()) {
-        	$config['upload_path']   = './assets/foto_penginapan/';
+        	$config['upload_path']   = './assets/foto_olahraga/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';
             $config['max_size']      = 1500;
             $config['max_width']     = 5000;
             $config['max_height']    = 5000;
             $this->upload->initialize($config);
-            if(! $this->upload->do_upload('foto_penginapan')) {
-					$penginapan=$this->m_gallery->detail($id_penginapan);
-					$foto=$this->m_gallery->foto($id_penginapan);
+            if(! $this->upload->do_upload('foto_olahraga')) {
+					$olahraga=$this->m_gallery->detail($id_olahraga);
+					$foto=$this->m_gallery->foto($id_olahraga);
 					$setting=$this->m_setting->list_setting();
-					$data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
-									'title2' => 'Add Foto : '.$penginapan->nama_penginapan,
+					$data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
+									'title2' => 'Add Foto : '.$olahraga->nama_olahraga,
 			                        'isi'	=>	'admin/gallery/v_add',
 			                        'error_upload'	=>	$this->upload->display_errors(),
-									'penginapan'	=>	$penginapan,
+									'olahraga'	=>	$olahraga,
 									'foto'	=>	$foto,
 									'map'		=>	$this->googlemaps->create_map()
 								);
@@ -53,30 +53,30 @@ class Gallery extends CI_Controller {
 			}else{
 		$upload_data        		= array('uploads' =>$this->upload->data());
 		$config['image_library']  	= 'gd2';
-		$config['source_image']   	= './assets/foto_penginapan/'.$upload_data['uploads']['file_name'];
+		$config['source_image']   	= './assets/foto_olahraga/'.$upload_data['uploads']['file_name'];
 
 		$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
 				$i = $this->input;
 	            $data = array(
-	            				'id_penginapan'=> $id_penginapan,
+	            				'id_olahraga'=> $id_olahraga,
 	            				'ket_foto'	=> $i->post('ket_foto'),
-	                    		'foto_penginapan'	=> $upload_data['uploads']['file_name'],
+	                    		'foto_olahraga'	=> $upload_data['uploads']['file_name'],
 	                        	);
 	            $this->m_gallery->add($data);
 	            $this->session->set_flashdata('sukses',' Data Kategori Berhasil Ditambahkan !');
-	            redirect('gallery/addfoto/'.$id_penginapan,'refresh');
+	            redirect('gallery/addfoto/'.$id_olahraga,'refresh');
 		}
 	}
 
-		$penginapan=$this->m_gallery->detail($id_penginapan);
-					$penginapan=$this->m_gallery->detail($id_penginapan);
-					$foto=$this->m_gallery->foto($id_penginapan);
+		$olahraga=$this->m_gallery->detail($id_olahraga);
+					$olahraga=$this->m_gallery->detail($id_olahraga);
+					$foto=$this->m_gallery->foto($id_olahraga);
 					$setting=$this->m_setting->list_setting();
-					$data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
-									'title2' => 'Add Foto : '.$penginapan->nama_penginapan,
+					$data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
+									'title2' => 'Add Foto : '.$olahraga->nama_olahraga,
 			                        'isi'	=>	'admin/gallery/v_add',			                     
-									'penginapan'	=>	$penginapan,
+									'olahraga'	=>	$olahraga,
 									'foto'	=>	$foto,
 									'map'		=>	$this->googlemaps->create_map()
 								);
@@ -86,19 +86,19 @@ class Gallery extends CI_Controller {
 
 
 	//Delete one item
-	public function delete($id_penginapan,$id_foto)
+	public function delete($id_olahraga,$id_foto)
 	{
 		//hapus gambar
-		$penginapan=$this->m_gallery->detail($id_penginapan);
+		$olahraga=$this->m_gallery->detail($id_olahraga);
 		$foto=$this->m_gallery->detailfoto($id_foto);
-		if ($foto->foto_penginapan != "") {
-			unlink('./assets/foto_penginapan/'.$foto->foto_penginapan);
+		if ($foto->foto_olahraga != "") {
+			unlink('./assets/foto_olahraga/'.$foto->foto_olahraga);
 		}
 		//===========================
 		$data = array('id_foto' => $id_foto);
 		$this->m_gallery->delete($data);
 		$this->session->set_flashdata('sukses','Foto Berhasil Dihapus');
-		redirect('gallery/addfoto/'.$id_penginapan,'refresh');
+		redirect('gallery/addfoto/'.$id_olahraga,'refresh');
 	}
 
 }

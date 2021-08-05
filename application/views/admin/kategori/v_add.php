@@ -1,6 +1,6 @@
 <div class="col-sm-5">
   <div class="panel panel-info">
-    <div class="panel-heading">Input Data Penginapan</div>
+    <div class="panel-heading">Input Data Olahraga</div>
     <div class="panel-body">
 
 <?php

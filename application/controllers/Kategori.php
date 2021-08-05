@@ -18,7 +18,7 @@ class Kategori extends CI_Controller {
 		$kategori = $this->m_kategori->lists();
 		$map=$this->googlemaps->create_map();
 		$setting=$this->m_setting->list_setting();
-        $data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
+        $data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
 						'title2' => 'Data Kategori',
                         'isi'	=>	'admin/kategori/v_lists',					
 						'kategori'	=>	$kategori,
@@ -32,7 +32,7 @@ class Kategori extends CI_Controller {
 	{
 
 		$map=$this->googlemaps->create_map();
-		$this->form_validation->set_rules('nama_kategori', 'Nama Penginapan','required',
+		$this->form_validation->set_rules('nama_kategori', 'Nama Olahraga','required',
         array('required' => '%s Harus Diisi'));
 
         if ($this->form_validation->run()) {
@@ -44,7 +44,7 @@ class Kategori extends CI_Controller {
             $this->upload->initialize($config);
             if(! $this->upload->do_upload('icon')) {
 				$setting=$this->m_setting->list_setting();
-        		$data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
+        		$data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
 										'title2' 		=>	'Add Data Kategori',
 										'error_upload'	=>	$this->upload->display_errors(),
 										'map'		=>	$map,
@@ -72,7 +72,7 @@ class Kategori extends CI_Controller {
 	}
 
 		$setting=$this->m_setting->list_setting();
-        $data = array('title' => 'GIS Sarana Olahraga '.$setting->nama_wilayah,
+        $data = array('title' => 'GIS Tempat Olahraga '.$setting->nama_wilayah,
 									'title2' 		=>	'Add Data kategori',
 									'map'		=>	$map,
 									'isi'	 		=>	'admin/kategori/v_add'
@@ -85,7 +85,7 @@ class Kategori extends CI_Controller {
 	{
 		$kategori=$this->m_kategori->detail($id_kategori);
 		$map=$this->googlemaps->create_map();
-		$this->form_validation->set_rules('nama_kategori', 'Nama Penginapan','required',
+		$this->form_validation->set_rules('nama_kategori', 'Nama Olahraga','required',
         array('required' => '%s Harus Diisi'));
 
         if ($this->form_validation->run()) {

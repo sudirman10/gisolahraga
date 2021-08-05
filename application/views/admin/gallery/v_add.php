@@ -20,7 +20,7 @@ if (isset($error_upload)){
  
 
 $atribut='class="form-horizontal"';
-echo form_open_multipart('gallery/addfoto/'.$penginapan->id_penginapan,$atribut);
+echo form_open_multipart('gallery/addfoto/'.$olahraga->id_olahraga,$atribut);
  ?>
 
 <div class="form-group">
@@ -36,7 +36,7 @@ echo form_open_multipart('gallery/addfoto/'.$penginapan->id_penginapan,$atribut)
   			<label class="control-label">Foto Tempat Olahraga</label>
         </div>
         <div class="col-sm-6">
-        	<input type="file" name="foto_penginapan" class="form-control" required>
+        	<input type="file" name="foto_olahraga" class="form-control" required>
         </div>
         <div class="col-sm-2">
         	<button type="submit" class="form-control btn btn-primary"><i class="fa fa-plus"></i> Add Foto</button>
@@ -60,9 +60,9 @@ echo form_open_multipart('gallery/addfoto/'.$penginapan->id_penginapan,$atribut)
 	<div class="col-sm-12">
 		<?php foreach ($foto as $key => $value) { ?>
 			<div class="col-sm-3">
-			<h4><?php echo $value->ket_foto; ?><a href="<?php echo base_url('gallery/delete/'.$value->id_penginapan.'/'.$value->id_foto); ?>" type="button" class="btn  btn-danger btn-xs" onclick="return confirm('Yakin Ingin Menghapus Data ini.?')" type="button" class="btn  btn-danger btn-sm" onclick="return confirm('Yakin Ingin Menghapus Foto ini.?')"><i class="fa fa-trash"></i></a></h4>
+			<h4><?php echo $value->ket_foto; ?><a href="<?php echo base_url('gallery/delete/'.$value->id_olahraga.'/'.$value->id_foto); ?>" type="button" class="btn  btn-danger btn-xs" onclick="return confirm('Yakin Ingin Menghapus Data ini.?')" type="button" class="btn  btn-danger btn-sm" onclick="return confirm('Yakin Ingin Menghapus Foto ini.?')"><i class="fa fa-trash"></i></a></h4>
 
-			<img width="200px" height="200px" src="<?php echo base_url('assets/foto_penginapan/'.$value->foto_penginapan); ?>">
+			<img width="200px" height="200px" src="<?php echo base_url('assets/foto_olahraga/'.$value->foto_olahraga); ?>">
 		</div>
 		<?php } ?>
 		
