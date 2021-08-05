@@ -74,5 +74,3 @@
 		window.location.href = "?kategori="+strUser; 
 	}
 </script>
-
-
