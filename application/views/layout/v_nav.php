@@ -18,7 +18,8 @@
 						<ul class="nav navbar-nav">
 							<li><a href="<?php echo base_url('') ?>">Home</a></li>
 								<li><a href="<?php echo base_url('home/listolahraga') ;?>">List Tempat Olahraga</a></li>
-								<li><a href="<?php echo base_url('home/about') ;?>">About</a></li>	
+								<li><a href="<?php echo base_url('home/about') ;?>">About</a></li>
+								<li><a href="<?php echo base_url('home/penggunaan') ;?>">Cara Penggunaan</a></li>		
 						</ul>
 					</nav>
 				</div><!-- /.navbar-collapse -->	

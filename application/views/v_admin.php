@@ -6,8 +6,6 @@
         <div class="panel-heading">Pemetaan Tempat Olahraga Kota Samarinda</div>
         <div class="panel-body">
           
-
-          
         <?php
           echo $map['html']; 
         ?>

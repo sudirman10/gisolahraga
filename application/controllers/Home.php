@@ -161,6 +161,19 @@ class Home extends CI_Controller
 		$this->load->view('layout/v_wrapper', $data, false);
 	}
 
+	public function penggunaan()
+	{
+		$map = $this->googlemaps->create_map();
+		$setting = $this->m_setting->list_setting();
+		$data = array(
+			'title' => 'GIS Tempat Olahraga ' . $setting->nama_wilayah,
+			'title2' => $setting->nama_wilayah,
+			'map'       => $map,
+			'isi'       => 'v_penggunaan'
+		);
+		$this->load->view('layout/v_wrapper', $data, false);
+	}
+
 	public function lokasi($id_olahraga)
 	{
 		$olahraga = $this->m_olahraga->detail($id_olahraga);
