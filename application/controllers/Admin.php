@@ -36,9 +36,8 @@ class Admin extends CI_Controller {
         $marker['infowindow_content'] .= '<div class="media-body">';
         $marker['infowindow_content'] .= '<h4 class="media-heading">'.$value->nama_olahraga.'</h4>';
         $marker['infowindow_content'] .= '<p>Alamat : '.$value->alamat.'</p>';
-	//	$marker['infowindow_content'] .= '<p>Jam Buka : '.$value->jam_buka.'</p>';
         $marker['infowindow_content'] .= '<p>No Telpon : '.$value->no_telpon.'</p>';
-        $marker['infowindow_content'] .= '<p>Harga : Rp.'.$value->harga.'/Hari</p><br>';
+        $marker['infowindow_content'] .= '<p>Harga : Rp.'.$value->harga.'</p><br>';
         $marker['infowindow_content'] .= '<a href="'.base_url('home/lokasi/'.$value->id_olahraga).'" class="btn btn-success btn-sm"><i class="fa fa-list"></i> Detail</a>';
         $marker['infowindow_content'] .= '</div>';
         $marker['infowindow_content'] .= '</div>';

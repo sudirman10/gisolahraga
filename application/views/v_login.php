@@ -64,7 +64,13 @@
       //form open
       echo form_open(base_url('login'),'class="form-horizontal" entype="multipart/formdata"');
       ?>
-                            
+                     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+						   <lord-icon
+    							src="https://cdn.lordicon.com/imamsnbq.json"
+   								trigger="loop"
+    							colors="primary:#121331,secondary:#08a88a"
+   							    style="width:320px;height:120px">
+					    	</lord-icon>   
                         <div class="form-group">
                             <div class="col-sm-12">
                                 <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
@@ -75,6 +81,7 @@
                                 <input class="form-control" placeholder="Password" name="password" type="password" value="">
                             </div>
                         </div>
+						
                                 
                         <div class="col-sm-6">
                             <button type="submit" class="btn btn-success btn-block"><i class="fa fa-sign-out"></i>Login</button>

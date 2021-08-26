@@ -12,7 +12,7 @@
 				<li><a class="dribbble" href="https://dribbble.com/"><span>Dribbble</span></a></li>
 			</ul>
 		</div>
-		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© <?php echo date('Y'); ?> Sistem Informasi Geografis Tempat Olahraga Kota Samarinda</p>
+		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© <?php echo date('Y'); ?> Sistem Informasi Geografis Tempat Olahraga Di Kota Samarinda</p>
 	</div>
 </div>
 <!--- /copy-right ---->
