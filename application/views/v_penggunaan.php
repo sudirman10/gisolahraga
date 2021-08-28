@@ -12,7 +12,7 @@
 					<h3>Menu List Tempat Olahraga Berfungsi untuk melihat seluruh data Tempat Olahraga Di Kota Samarinda.</h3><br>
 					<h3>Menu About Berfungsi menampilan informasi mengenai Aplikasi Web SIG Tempat Olahraga Di Kota Samarinda.</h3><br>
 					<h3>Menu Cara Penggunaan Berfungsi memberikan informasi penggunaan Aplikasi Web SIG Tempat Olahraga Di Kota Samarinda.</h3><br>
-					<h3>Login hanya dapat di akses oleh Admin.</h3>
+					<h3>Login hanya dapat di akses oleh Admin, untuk menginput, edit, hapus data Tempat Olahraga.</h3>
         </div>
         <div class="panel-footer"></div>
       </div>
