@@ -104,12 +104,12 @@
     </div>
     <div class="col-sm-7">
       <div class="panel panel-info">
-        <div class="panel-heading">Galleri</div>
+        <div class="panel-heading">Galeri</div>
         <div class="panel-body">
           <div class="col-sm-12">
             <?php foreach ($foto as $key => $value) { ?>
-              <div class="col-sm-3 text-center">            
-                <img border="12px" width="150px" height="150px"  src="<?php echo base_url('assets/foto_olahraga/'.$value->foto_olahraga); ?>">               
+              <div class="col-sm-3 text-center" >            
+                <img border="12px" width="150px" height="150px" src="<?php echo base_url('assets/foto_olahraga/'.$value->foto_olahraga); ?>" >               
                 <h5><?php echo $value->ket_foto; ?></h5>
              </div>
         <?php } ?>
@@ -124,8 +124,6 @@
       <div class="panel panel-info">
         <div class="panel-heading">Lokasi Tempat Olahraga</div>
         <div class="panel-body">
-          
-
           
         <?php
           echo $map['html']; 

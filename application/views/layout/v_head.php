@@ -17,9 +17,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="<?php echo base_url()?>assets/template/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="<?php echo base_url()?>assets/template/css/style.css" rel='stylesheet' type='text/css' />
 <link href="<?php echo base_url()?>assets/template/css/font-awesome.css" rel="stylesheet">
+<link href="<?php echo base_url()?>assets/template/css/lightbox.css" rel="stylesheet" />
 <!-- Custom Theme files -->
 <script src="<?php echo base_url()?>assets/template/js/jquery-1.12.0.min.js"></script>
 <script src="<?php echo base_url()?>assets/template/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/template/js/lightbox.js"></script>
 <!--animate-->
 <link href="<?php echo base_url()?>assets/template/css/animate.css" rel="stylesheet" type="text/css" media="all">
 <script src="<?php echo base_url()?>assets/template/js/wow.min.js"></script>

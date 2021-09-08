@@ -3,16 +3,15 @@
 	<div class="col-sm-12">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				Pemetaan Lokasi
+				Pemetaan Lokasi<br>
 				<button class="btn btn-success btn-sm" onclick="myloc()"><i class="fa fa-location-arrow "></i> My Location</button>
 				<select name="" id="kategori">
 					<?php
 					foreach ($kategori->result() as $item) { 
 						?>
-						<option value="<?php echo $item->id_kategori; ?> "> <?php echo $item->nama_kategori;?></option>
+						<option value="<?php echo $item->id_kategori; ?>"> <?php echo $item->nama_kategori;?></option>
 					<?php }
-					?>
-					</select> <button onclick="filterClick()">Filter</button>
+					?> </select> <button onclick="filterClick()">Filter</button>
 			</div>
 				<?php
 				echo $map['html'];

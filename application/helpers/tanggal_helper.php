@@ -7,15 +7,23 @@ if (!function_exists('format_indo')) {
     // array hari dan bulan
     $Hari = array("Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu");
     $Bulan = array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
-    
+
     // pemisahan tahun, bulan, hari, dan waktu
     $tahun = substr($date,0,4);
     $bulan = substr($date,5,2);
     $tgl = substr($date,8,2);
-    $waktu = substr($date,11,11);
-    $hari = date("w",strtotime($date));
-    $result = $Hari[$hari].", ".$tgl." ".$Bulan[(int)$bulan-1]." ".$tahun." ".$waktu;
+    $waktu = substr($date,11,5);
+    $hari = date("w", strtotime($date));
 
-    return $result;
+    $result = $Hari[$hari].", ".$tgl." - ".$Bulan[(int)$bulan-1]." - ".$tahun." ".$waktu." ";
+
+		$tanggal = mktime(date('m'), date("d"), date('Y'));
+    //echo "Tanggal : <b> " . date("d-m-Y", $tanggal ) . "</b>";
+    date_default_timezone_set("Asia/Makassar");
+    $jam = date ("H:i:s");
+		$tgl = date("d-m-Y", $tanggal);
+		$tglTime = $tgl.", ".$jam;
+
+    return $Hari[$hari].", ".$tglTime;
   }
 }

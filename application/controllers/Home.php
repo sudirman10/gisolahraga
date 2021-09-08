@@ -22,6 +22,7 @@ class Home extends CI_Controller
 		//tampilan awal view map
 		$this->load->library("googlemaps");
 		if (isset($_GET['ownlatitude']) && isset($_GET['ownlongitude'])) {
+			$marker['infowindow_content'] = '<div class="media" style="width:400px;">';
 			$config['center'] = $_GET['ownlatitude'] . ", " . $_GET['ownlongitude'];
 			$circle = array();
 			$circle['center'] = $_GET['ownlatitude'] . ", " . $_GET['ownlongitude'];
@@ -67,7 +68,6 @@ class Home extends CI_Controller
 				$marker['infowindow_content'] .= '<div class="media-body">';
 				$marker['infowindow_content'] .= '<h4 class="media-heading">'.$value->nama_olahraga.'</h4>';
 				$marker['infowindow_content'] .= '<p>Alamat : '.$value->alamat.'</p>';
-				// $marker['infowindow_content'] .= "<p>Jam Buka : ".$value->jam_buka."</p>";
 				$marker['infowindow_content'] .= '<p>No Telpon : '.$value->no_telpon.'</p>';
 				$marker['infowindow_content'] .= '<p>Harga : Rp.'.number_format($value->harga).'</p><br>';
 				$marker['infowindow_content'] .= '<a href="'.base_url('home/lokasi/'.$value->id_olahraga).'" class="btn btn-success btn-sm"><i class="fa fa-list"></i> Detail</a>';
@@ -105,7 +105,6 @@ class Home extends CI_Controller
 		    $marker['infowindow_content'] .= '<div class="media-body">';
 		    $marker['infowindow_content'] .= '<h4 class="media-heading">'.$value->nama_olahraga.'</h4>';
 		    $marker['infowindow_content'] .= '<p>Alamat : '.$value->alamat.'</p>';
-			// $marker['infowindow_content'] .= "<p>Jam Buka : ".$value->jam_buka."</p>";
 		    $marker['infowindow_content'] .= '<p>No Telpon : '.$value->no_telpon.'</p>';
 		    $marker['infowindow_content'] .= '<p>Harga : Rp.'.number_format($value->harga).'</p><br>';
 		    $marker['infowindow_content'] .= '<a href="'.base_url('home/lokasi/'.$value->id_olahraga).'" class="btn btn-success btn-sm"><i class="fa fa-list"></i> Detail</a>';
@@ -193,7 +192,6 @@ class Home extends CI_Controller
 		$marker['infowindow_content'] .= '<h5 class="media-heading">' . $olahraga->nama_olahraga . '</h5>';
 		$marker['infowindow_content'] .= '<a>' . $olahraga->alamat . '</a><br>';
 		$marker['infowindow_content'] .= '<a>' . $olahraga->no_telpon . '</a><br>';
-		//$marker['infowindow_content'] .= '<a>' . $olahraga->jam_buka . '</a><br>';
 		$marker['infowindow_content'] .= '<a>' . $olahraga->deskripsi . '</a><br>';
 		$marker['infowindow_content'] .= '<a>Rp.' . $olahraga->harga . '</a><br>';
 		$marker['infowindow_content'] .= '</div>';
@@ -263,7 +261,6 @@ class Home extends CI_Controller
 			$marker['infowindow_content'] .= '<h4 class="media-heading">' . $value->nama_olahraga . '</h4>';
 			$marker['infowindow_content'] .= '<p>Alamat : ' . $value->alamat . '</p>';
 			$marker['infowindow_content'] .= '<p>No Telpon : ' . $value->no_telpon . '</p>';
-			$marker['infowindow_content'] .= '<p>Jam Buka : '.$value->jam_buka.'</p>';
 			$marker['infowindow_content'] .= '<p>Harga : Rp.' . number_format($value->harga) . '</p><br>';
 			$marker['infowindow_content'] .= '<a href="' . base_url('home/lokasi/' . $value->id_olahraga) . '" class="btn btn-success btn-sm"><i class="fa fa-list"></i> Detail</a>';
 			$marker['infowindow_content'] .= '<button class="btn btn-success btn-sm" onclick="makeRute()"><i class="fa fa-list"></i> Rute</button>';

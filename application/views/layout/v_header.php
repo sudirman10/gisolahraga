@@ -33,7 +33,7 @@
     colors="primary:#121331,secondary:#08a88a"
     style="width:60px;height:60px">
 </lord-icon>
-            <li><div class="securetxt"><?php echo format_indo(date('Y-m-d H:i:s a'));?></div></li>
+            <li><div class="securetxt"><?php echo format_indo(date('Y-m-d H:i:s'));?></div></li>
 			<div class="clearfix"></div>
 		</div>
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
