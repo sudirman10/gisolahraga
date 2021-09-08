@@ -36,7 +36,7 @@
                   <td><?php echo $value->nama_kategori ?></td>
 									<td><?php echo $value->jam_buka ?></td>
                   <td><?php echo $value->no_telpon ?></td>
-                  <td>Rp. <?php echo number_format($value->harga); ?>/Bulan</td>
+                  <td>Rp. <?php echo number_format($value->harga); ?></td>
                   <td><a class="btn btn-success btn-sm" href="<?php echo base_url('home/lokasi/'.$value->id_olahraga) ?>"><i class="fa fa-eye"></i> View</a></td>
                 </tr>
                   <?php } ?>
