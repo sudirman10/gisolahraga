@@ -26,7 +26,7 @@ class Home extends CI_Controller
 			$config['center'] = $_GET['ownlatitude'] . ", " . $_GET['ownlongitude'];
 			$circle = array();
 			$circle['center'] = $_GET['ownlatitude'] . ", " . $_GET['ownlongitude'];
-			$circle['radius'] = 500;
+			$circle['radius'] = 100;
 			$marker['animation'] = 'BOUNCE';
 			$marker['position'] =  $_GET['ownlatitude'] . ", " . $_GET['ownlongitude'];
 			$marker['icon'] = base_url('assets/icon/position.png');
@@ -39,7 +39,7 @@ class Home extends CI_Controller
 		if (isset($_GET['ownlatitude']) && isset($_GET['ownlongitude']) && isset($_GET['tujuanlatitude']) && isset($_GET['tujuanlongitude'])) {
 	
 			$config['directions'] = TRUE;
-			$config['directionsMode'] = "DRIVING";
+			$config['directionsMode'] = "WALKING";
 			$config['directionsStart'] = $_GET['ownlatitude'].','.$_GET['ownlongitude'];
 			$config['directionsEnd'] = $_GET['tujuanlatitude'].','.$_GET['tujuanlongitude'];
 			$config['directionsDivID'] = 'detail';
