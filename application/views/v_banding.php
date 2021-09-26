@@ -8,90 +8,90 @@
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							Nama
+							Nama	:
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->nama_olahraga; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Kategori</p>
+							<p class="control-label">Kategori :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->nama_kategori; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Alamat</p>
+							<p class="control-label">Alamat :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->alamat; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Jam Buka</p>
+							<p class="control-label">Jam Buka :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->jam_buka; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">No Telpon</p>
+							<p class="control-label">No Telpon :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->no_telpon; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Latitude</p>
+							<p class="control-label">Latitude :</p>
 						</div>
-						<div class="col-sm-8"> :
+						<div class="col-sm-8"> 
 							<?php echo $olahraga->latitude; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Longitude</p>
+							<p class="control-label">Longitude :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->longitude; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Harga</p>
+							<p class="control-label">Harga :</p>
 						</div>
-						<div class="col-sm-8">: Rp.
+						<div class="col-sm-8"> Rp.
 							<?php echo number_format($olahraga->harga); ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Fasilitas</p>
+							<p class="control-label">Fasilitas :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->fasilitas; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Deskripsi</p>
+							<p class="control-label">Deskripsi :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $olahraga->deskripsi; ?>
 						</div>
 					</div>
@@ -123,90 +123,90 @@
 							?>
 	<div class="form-group">
 						<div class="col-sm-4">
-							Nama
+							Nama :
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->nama_olahraga; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Kategori</p>
+							<p class="control-label">Kategori :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->nama_kategori; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Alamat</p>
+							<p class="control-label">Alamat :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->alamat; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Jam Buka</p>
+							<p class="control-label">Jam Buka :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->jam_buka; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">No Telpon</p>
+							<p class="control-label">No Telpon :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->no_telpon; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Latitude</p>
+							<p class="control-label">Latitude :</p>
 						</div>
-						<div class="col-sm-8"> :
+						<div class="col-sm-8"> 
 							<?php echo $banding->latitude; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Longitude</p>
+							<p class="control-label">Longitude :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->longitude; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Harga</p>
+							<p class="control-label">Harga :</p>
 						</div>
-						<div class="col-sm-8">: Rp.
+						<div class="col-sm-8">  Rp.
 							<?php echo number_format($banding->harga); ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Fasilitas</p>
+							<p class="control-label">Fasilitas :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->fasilitas; ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-4">
-							<p class="control-label">Deskripsi</p>
+							<p class="control-label">Deskripsi :</p>
 						</div>
-						<div class="col-sm-8">:
+						<div class="col-sm-8">
 							<?php echo $banding->deskripsi; ?>
 						</div>
 					</div>
